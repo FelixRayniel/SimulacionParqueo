@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System.Timers;
+using System.Windows.Forms;
 
 namespace PruebaParqueo
 {
@@ -9,28 +10,45 @@ namespace PruebaParqueo
         public Form1()
         {
             InitializeComponent();
-            pictureBox1.Location = new Point(1,111);
-            pictureBox8.Location = new Point(1, 301);
-            pictureBox7.Location = new Point(1, 484);
+            pictureBox1.Location = new Point(1,221);
+            pictureBox8.Location = new Point(1, 411);
+            pictureBox7.Location = new Point(1, 594);//484
 
-            pictureBox2.Location = new Point(1454, 27);
-            pictureBox3.Location = new Point(1454, 176);
-            pictureBox4.Location = new Point(1454, 330);
-            pictureBox5.Location = new Point(1454, 486);
-            pictureBox6.Location = new Point(1454, 630);
-            pictureBox9.Location = new Point(1454, 783);
+            pictureBox1.Size = new Size(1100, 10);
+            pictureBox8.Size = new Size(1100, 10);
+            pictureBox7.Size = new Size(1100, 10);
 
-            button5.Location = new Point(37,542);
-            button1.Location = new Point(37, 692);
-            label9.Location = new Point(384,628);
-            label8.Location = new Point(384, 674);
-            label10.Location = new Point(384, 717);
+            pictureBox2.Location = new Point(1100, 47);
+            pictureBox11.Location = new Point(1454, 196);
+            pictureBox6.Location = new Point(1454, 350);
+            pictureBox5.Location = new Point(1454, 506);
+            pictureBox9.Location = new Point(1454, 660);
+            pictureBox4.Location = new Point(1100, 803);
+            pictureBox10.Location = new Point(1654, 47);
+            pictureBox3.Location = new Point(1100, 48);
+            pictureBox12.Location = new Point(1100, 594);
 
-            label1.Location = new Point(1454, 197);
-            label2.Location = new Point(1454, 350);
-            label3.Location = new Point(1454, 507);
-            label4.Location = new Point(1454, 649);
-            label11.Location = new Point(1454, 802);
+            pictureBox13.Location = new Point(300, 280);
+            pictureBox14.Location = new Point(300, 480);
+
+            pictureBox10.Size = new Size(10,766);
+            pictureBox3.Size = new Size(10, 183);
+            pictureBox12.Size = new Size(10, 213);
+            
+            pictureBox4.Size = new Size(560, 10);
+            pictureBox2.Size = new Size(560, 10);
+
+            button5.Location = new Point(37,662);
+            button1.Location = new Point(37, 792);
+            label9.Location = new Point(384,712);
+            label8.Location = new Point(384, 759);
+            label10.Location = new Point(384, 814);
+
+            label1.Location = new Point(1445, 172);
+            label2.Location = new Point(1445, 325);
+            label3.Location = new Point(1445, 482);
+            label4.Location = new Point(1445, 634);
+            label11.Location = new Point(1445, 777);
 
         }
 
@@ -635,6 +653,11 @@ namespace PruebaParqueo
             }
 
             label11.Text = "Tiempo Restante: " + TiempoCaballos[4] + " Segundos";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void CargarLabelTotales()
