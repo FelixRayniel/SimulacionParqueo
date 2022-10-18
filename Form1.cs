@@ -30,7 +30,7 @@ namespace PruebaParqueo
             label2.Location = new Point(1640, 350);
             label3.Location = new Point(1640, 507);
             label4.Location = new Point(1640, 649);
-            label5.Location = new Point(1640, 802);
+            label11.Location = new Point(1640, 802);
 
         }
 
