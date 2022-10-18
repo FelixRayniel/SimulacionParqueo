@@ -20,6 +20,18 @@ namespace PruebaParqueo
             pictureBox6.Location = new Point(1454, 630);
             pictureBox9.Location = new Point(1454, 783);
 
+            button5.Location = new Point(37,542);
+            button1.Location = new Point(37, 692);
+            label9.Location = new Point(384,628);
+            label8.Location = new Point(384, 674);
+            label10.Location = new Point(384, 717);
+
+            label1.Location = new Point(1640, 196);
+            label2.Location = new Point(1640, 350);
+            label3.Location = new Point(1640, 507);
+            label4.Location = new Point(1640, 649);
+            label5.Location = new Point(1640, 802);
+
         }
 
         bool[] Parking = {true, true, true, true, true, true, true };
