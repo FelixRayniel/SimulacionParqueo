@@ -26,11 +26,11 @@ namespace PruebaParqueo
             label8.Location = new Point(384, 674);
             label10.Location = new Point(384, 717);
 
-            label1.Location = new Point(1640, 196);
-            label2.Location = new Point(1640, 350);
-            label3.Location = new Point(1640, 507);
-            label4.Location = new Point(1640, 649);
-            label11.Location = new Point(1640, 802);
+            label1.Location = new Point(1454, 197);
+            label2.Location = new Point(1454, 350);
+            label3.Location = new Point(1454, 507);
+            label4.Location = new Point(1454, 649);
+            label11.Location = new Point(1454, 802);
 
         }
 
