@@ -141,7 +141,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::PruebaParqueo.Properties.Resources.vBcoKD_black_thick_line_png_thin_lines_thick_lines_horizontal_lines_;
-            this.pictureBox7.Location = new System.Drawing.Point(-5, 484);
+            this.pictureBox7.Location = new System.Drawing.Point(1, 484);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(883, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PruebaParqueo.Properties.Resources.vBcoKD_black_thick_line_png_thin_lines_thick_lines_horizontal_lines_;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 301);
+            this.pictureBox8.Location = new System.Drawing.Point(1, 301);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(883, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

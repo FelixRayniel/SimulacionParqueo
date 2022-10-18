@@ -9,7 +9,17 @@ namespace PruebaParqueo
         public Form1()
         {
             InitializeComponent();
-            
+            pictureBox1.Location = new Point(1,111);
+            pictureBox8.Location = new Point(1, 301);
+            pictureBox7.Location = new Point(1, 484);
+
+            pictureBox2.Location = new Point(1454, 27);
+            pictureBox3.Location = new Point(1454, 176);
+            pictureBox4.Location = new Point(1454, 330);
+            pictureBox5.Location = new Point(1454, 486);
+            pictureBox6.Location = new Point(1454, 630);
+            pictureBox9.Location = new Point(1454, 783);
+
         }
 
         bool[] Parking = {true, true, true, true, true, true, true };
