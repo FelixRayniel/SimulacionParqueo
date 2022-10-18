@@ -151,7 +151,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PruebaParqueo.Properties.Resources.vBcoKD_black_thick_line_png_thin_lines_thick_lines_horizontal_lines_;
-            this.pictureBox8.Location = new System.Drawing.Point(-5, 301);
+            this.pictureBox8.Location = new System.Drawing.Point(0, 301);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(883, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +229,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PruebaParqueo.Properties.Resources.vBcoKD_black_thick_line_png_thin_lines_thick_lines_horizontal_lines_;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(883, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,6 +367,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
             this.Text = "Prueba de Parqueo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
