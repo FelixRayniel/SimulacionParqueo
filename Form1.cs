@@ -1,10 +1,11 @@
 using System.Threading.Tasks;
 using System.Timers;
+using System.Windows.Forms;
 
 namespace PruebaParqueo
 {
     public partial class Form1 : Form
-    {        
+    {
         //12, 303
         public Form1()
         {
@@ -13,18 +14,19 @@ namespace PruebaParqueo
             pictureBox8.Location = new Point(1, 301);
             pictureBox7.Location = new Point(1, 484);
 
-            pictureBox2.Location = new Point(1454, 27);
-            pictureBox3.Location = new Point(1454, 176);
-            pictureBox4.Location = new Point(1454, 330);
-            pictureBox5.Location = new Point(1454, 486);
-            pictureBox6.Location = new Point(1454, 630);
-            pictureBox9.Location = new Point(1454, 783);
+            pictureBox1.Size = new Size(1100, 10);
+            pictureBox8.Size = new Size(1100, 10);
+            pictureBox7.Size = new Size(1100, 10);
 
-            button5.Location = new Point(37,542);
-            button1.Location = new Point(37, 692);
-            label9.Location = new Point(384,628);
-            label8.Location = new Point(384, 674);
-            label10.Location = new Point(384, 717);
+            pictureBox2.Location = new Point(1100, 47);
+            pictureBox11.Location = new Point(1454, 196);
+            pictureBox6.Location = new Point(1454, 350);
+            pictureBox5.Location = new Point(1454, 506);
+            pictureBox9.Location = new Point(1454, 660);
+            pictureBox4.Location = new Point(1100, 803);
+            pictureBox10.Location = new Point(1654, 47);
+            pictureBox3.Location = new Point(1100, 48);
+            pictureBox12.Location = new Point(1100, 594);
 
             label1.Location = new Point(1454, 197);
             label2.Location = new Point(1454, 350);
@@ -32,13 +34,32 @@ namespace PruebaParqueo
             label4.Location = new Point(1454, 649);
             label11.Location = new Point(1454, 802);*/
 
+            pictureBox10.Size = new Size(10, 766);
+            pictureBox3.Size = new Size(10, 183);
+            pictureBox12.Size = new Size(10, 213);
+
+            pictureBox4.Size = new Size(560, 10);
+            pictureBox2.Size = new Size(560, 10);
+
+            button5.Location = new Point(37, 662);
+            button1.Location = new Point(37, 792);
+            label9.Location = new Point(384, 712);
+            label8.Location = new Point(384, 759);
+            label10.Location = new Point(384, 814);
+
+            label1.Location = new Point(1445, 172);
+            label2.Location = new Point(1445, 325);
+            label3.Location = new Point(1445, 482);
+            label4.Location = new Point(1445, 634);
+            label11.Location = new Point(1445, 777);
+
         }
 
-        bool[] Parking = {true, true, true, true, true, true, true };
+        bool[] Parking = { true, true, true, true, true, true, true };
         PictureBox[] CaballoParking = new PictureBox[7];
         public PictureBox Caballo = new PictureBox();
         Random Llegadas = new Random();
-        int [] TiempoCaballos = new int[7];
+        int[] TiempoCaballos = new int[7];
         int[] TiempoTotal = new int[7];
 
         int TA = 0, TT = 0;
@@ -73,7 +94,7 @@ namespace PruebaParqueo
                             C3 = true;
                         }
                         CaballoParking[0].Left = CaballoParking[0].Left - n1.Next(10, 30);
-                        
+
                     }
                     if (CaballoParking[0].Location.X <= 1173 && CaballoParking[0].Location.Y <= 176)
                     {
@@ -86,7 +107,7 @@ namespace PruebaParqueo
                         CaballoParking[0].Top = CaballoParking[0].Top + n1.Next(10, 30);
                     }
 
-                    if (CaballoParking[0].Location.X >= 12 && CaballoParking[0].Location.Y >= 176)
+                    if (CaballoParking[0].Location.X >= 12 && CaballoParking[0].Location.Y >= 258)
                     {
                         if (C5 == false)
                         {
@@ -98,7 +119,7 @@ namespace PruebaParqueo
 
                     }
 
-                    if (CaballoParking[0].Location.X <= 12 && CaballoParking[0].Location.Y >= 176)
+                    if (CaballoParking[0].Location.X <= 12 && CaballoParking[0].Location.Y >= 258)
                     {
                         CaballoParking[0].Visible = false;
                         Parking[0] = true;
@@ -110,7 +131,7 @@ namespace PruebaParqueo
                         CargarLabelTotales();
 
                     }
-                    
+
                 }
                 else
                 {
@@ -171,8 +192,8 @@ namespace PruebaParqueo
                     C5 = false;
 
                 }
-               
-                
+
+
                 if (Parking[0] == false && timer1.Enabled == false)
                 {
                     //Thread.Sleep(Llegadas.Next(2000, 50000));
@@ -184,11 +205,11 @@ namespace PruebaParqueo
                     }
                     GetCaballo(NuevoCaballo());
                     timer2.Enabled = true;
-                    
+
                 }
 
             }
-            
+
 
 
         }
@@ -226,7 +247,7 @@ namespace PruebaParqueo
                         CaballoParking[1].Top = CaballoParking[1].Top - n2.Next(10, 30);
                     }
 
-                    if (CaballoParking[1].Location.X >= 12 && CaballoParking[1].Location.Y <= 176)
+                    if (CaballoParking[1].Location.X >= 12 && CaballoParking[1].Location.Y <= 258)
                     {
                         if (C5 == false)
                         {
@@ -238,7 +259,7 @@ namespace PruebaParqueo
 
                     }
 
-                    if (CaballoParking[1].Location.X <= 12 && CaballoParking[1].Location.Y <= 176)
+                    if (CaballoParking[1].Location.X <= 12 && CaballoParking[1].Location.Y <= 258)
                     {
                         CaballoParking[1].Visible = false;
                         Parking[1] = true;
@@ -320,7 +341,7 @@ namespace PruebaParqueo
                 }
 
             }
-         
+
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -366,9 +387,9 @@ namespace PruebaParqueo
                         CaballoParking[2].Left = CaballoParking[2].Left - n3.Next(10, 30);
                     }
 
-                    if (CaballoParking[2].Location.X <= 12 && CaballoParking[2].Location.Y <= 176)
+                    if (CaballoParking[2].Location.X <= 12 && CaballoParking[2].Location.Y <= 258)
                     {
-                        
+
                         CaballoParking[2].Visible = false;
                         Parking[2] = true;
                         TiempoC3.Enabled = false;
@@ -399,7 +420,6 @@ namespace PruebaParqueo
                 if (Caballo.Location.X <= 1173)
                 {
                     Caballo.Left = Caballo.Left + n3.Next(10, 30);
-
                 }
 
                 if (Caballo.Location.X >= 1173 && Caballo.Location.Y <= 372)
@@ -425,7 +445,7 @@ namespace PruebaParqueo
                 }
 
 
-                if (Caballo.Location.X >= 1498 && Caballo.Location.Y >= 372)
+                if (Caballo.Location.X >= 1498 && Caballo.Location.Y <= 405)
                 {
                     Parking[2] = false;
                     timer3.Enabled = false;
@@ -450,7 +470,7 @@ namespace PruebaParqueo
                 }
 
             }
-           
+
         }
 
         private void timer4_Tick(object sender, EventArgs e)
@@ -625,7 +645,7 @@ namespace PruebaParqueo
 
                     }
 
-                    if (CaballoParking[4].Location.X <= 12 && CaballoParking[4].Location.Y <= 176)
+                    if (CaballoParking[4].Location.X <= 12 && CaballoParking[4].Location.Y <= 258)
                     {
                         CaballoParking[4].Visible = false;
                         Parking[4] = true;
@@ -715,19 +735,19 @@ namespace PruebaParqueo
         public PictureBox NuevoCaballo()
         {
             var imgPictureBox = new PictureBox();
-            imgPictureBox.Location = new System.Drawing.Point(12, 361);
+            imgPictureBox.Location = new System.Drawing.Point(12, 455);
             imgPictureBox.Size = new System.Drawing.Size(145, 103);
             imgPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             imgPictureBox.Image = Image.FromFile(Ruta[Llegadas.Next(0,4)]);  //ebede532f6f5cf644a3fcf79d14b046c.gif
             Controls.Add(imgPictureBox);
             imgPictureBox.Visible = true;
 
-            return imgPictureBox; 
+            return imgPictureBox;
         }
 
         public void GetCaballo(PictureBox caballo)
         {
-            Caballo = caballo;   
+            Caballo = caballo;
         }
 
         private void TiempoC1_Tick(object sender, EventArgs e)
@@ -738,10 +758,10 @@ namespace PruebaParqueo
             {
                 TiempoC1.Stop();
             }
-                
-            label1.Text = "Tiempo Restante: "+ TiempoCaballos[0] + " Segundos";
 
-            
+            label1.Text = "Tiempo Restante: " + TiempoCaballos[0] + " Segundos";
+
+
         }
 
         private void TiempoC2_Tick(object sender, EventArgs e)
@@ -839,7 +859,6 @@ namespace PruebaParqueo
             label8.Text = "Total Tiempo Autos Estacionados: " + TT.ToString() + " Segundos";
             label10.Text = "Monto Total Cobrado: " + MT.ToString() + " DOP";
         }
-
     }
 }
 

@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -57,7 +53,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.TiempoC5 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -78,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -332,6 +329,37 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Tiempo Restate: 0 Segundos";
             // 
+            // timer5
+            // 
+            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            // 
+            // TiempoC5
+            // 
+            this.TiempoC5.Interval = 1000;
+            this.TiempoC5.Tick += new System.EventHandler(this.TiempoC5_Tick);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.Image = global::PruebaParqueo.Properties.Resources.pngwing_com;
+            this.pictureBox10.Location = new System.Drawing.Point(1687, 27);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(13, 793);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 27;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Black;
+            this.pictureBox11.Image = global::PruebaParqueo.Properties.Resources.pngwing2_com;
+            this.pictureBox11.Location = new System.Drawing.Point(1433, 188);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(263, 13);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 28;
+            this.pictureBox11.TabStop = false;
+            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::PruebaParqueo.Properties.Resources.Linea2;
@@ -340,18 +368,65 @@
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(265, 10);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 25;
+            this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
             // 
-            // timer5
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Black;
+            this.pictureBox6.Image = global::PruebaParqueo.Properties.Resources.pngwing2_com;
+            this.pictureBox6.Location = new System.Drawing.Point(1433, 498);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(263, 13);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 30;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Black;
+            this.pictureBox5.Image = global::PruebaParqueo.Properties.Resources.pngwing2_com;
+            this.pictureBox5.Location = new System.Drawing.Point(1433, 337);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(263, 13);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 31;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.Image = global::PruebaParqueo.Properties.Resources.pngwing2_com;
+            this.pictureBox4.Location = new System.Drawing.Point(1179, 807);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(516, 13);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Image = global::PruebaParqueo.Properties.Resources.pngwing_com;
+            this.pictureBox3.Location = new System.Drawing.Point(1179, 33);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(13, 168);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox12
             // 
             this.timer5.Interval = 50;
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
-            // TiempoC5
+            // pictureBox13
             // 
-            this.TiempoC5.Interval = 1000;
-            this.TiempoC5.Tick += new System.EventHandler(this.TiempoC5_Tick);
+            this.pictureBox13.Location = new System.Drawing.Point(1100, 401);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(144, 95);
+            this.pictureBox13.TabIndex = 35;
+            this.pictureBox13.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -500,7 +575,6 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -514,10 +588,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox15);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -531,6 +601,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -551,10 +623,6 @@
 
         #endregion
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
         private Button button5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
@@ -577,7 +645,6 @@
         private Label label10;
         private Button button1;
         private Label label11;
-        private PictureBox pictureBox9;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer TiempoC5;
         private PictureBox pictureBox10;
