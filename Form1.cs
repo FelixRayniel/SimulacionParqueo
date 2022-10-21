@@ -34,11 +34,9 @@ namespace PruebaParqueo
             label4.Location = new Point(1454, 649);
             label11.Location = new Point(1454, 802);*/
 
-            pictureBox10.Size = new Size(10, 766);
-            pictureBox3.Size = new Size(10, 183);
+            /*pictureBox10.Size = new Size(10, 766);
             pictureBox12.Size = new Size(10, 213);
 
-            pictureBox4.Size = new Size(560, 10);
             pictureBox2.Size = new Size(560, 10);
 
             button5.Location = new Point(37, 662);
@@ -51,7 +49,7 @@ namespace PruebaParqueo
             label2.Location = new Point(1445, 325);
             label3.Location = new Point(1445, 482);
             label4.Location = new Point(1445, 634);
-            label11.Location = new Point(1445, 777);
+            label11.Location = new Point(1445, 777);*/
 
         }
 
