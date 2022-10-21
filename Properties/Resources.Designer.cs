@@ -63,9 +63,49 @@ namespace PruebaParqueo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _58f8bd900ed2bdaf7c12830c {
+            get {
+                object obj = ResourceManager.GetObject("58f8bd900ed2bdaf7c12830c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ebede532f6f5cf644a3fcf79d14b046c {
             get {
                 object obj = ResourceManager.GetObject("ebede532f6f5cf644a3fcf79d14b046c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_fleche_droite_jaune {
+            get {
+                object obj = ResourceManager.GetObject("icone-fleche-droite-jaune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_fleche_gauche_jaune {
+            get {
+                object obj = ResourceManager.GetObject("icone-fleche-gauche-jaune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Linea2 {
+            get {
+                object obj = ResourceManager.GetObject("Linea2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

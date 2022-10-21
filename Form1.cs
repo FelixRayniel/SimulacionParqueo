@@ -9,7 +9,7 @@ namespace PruebaParqueo
         public Form1()
         {
             InitializeComponent();
-            pictureBox1.Location = new Point(1,111);
+            /*pictureBox1.Location = new Point(1,111);
             pictureBox8.Location = new Point(1, 301);
             pictureBox7.Location = new Point(1, 484);
 
@@ -30,7 +30,7 @@ namespace PruebaParqueo
             label2.Location = new Point(1454, 350);
             label3.Location = new Point(1454, 507);
             label4.Location = new Point(1454, 649);
-            label11.Location = new Point(1454, 802);
+            label11.Location = new Point(1454, 802);*/
 
         }
 
@@ -43,6 +43,10 @@ namespace PruebaParqueo
 
         int TA = 0, TT = 0;
         float MT = 0;
+
+        bool C1 = false, C2 = false, C3 = false, C4 = false, C5 = false;
+
+        string[] Ruta = { @"C:\Carro.png", @"C:\CarroRojo.png", @"C:\CarroAzul.png", @"C:\CarroAmarillo.png" };
         private void button5_Click(object sender, EventArgs e)
         {
             GetCaballo(NuevoCaballo());
@@ -60,21 +64,36 @@ namespace PruebaParqueo
                 {
                     CargarLabel(0);
 
-                    if (CaballoParking[0].Location.X >= 916)
+                    if (CaballoParking[0].Location.X >= 1173)
                     {
-                        CaballoParking[0].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C3 == false)
+                        {
+                            CaballoParking[0].Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                            CaballoParking[0].Refresh();
+                            C3 = true;
+                        }
                         CaballoParking[0].Left = CaballoParking[0].Left - n1.Next(10, 30);
                         
                     }
-                    if (CaballoParking[0].Location.X <= 916 && CaballoParking[0].Location.Y <= 176)
+                    if (CaballoParking[0].Location.X <= 1173 && CaballoParking[0].Location.Y <= 176)
                     {
-                        CaballoParking[0].Image = Image.FromFile(@"C:\CarroAbajo.png");
+                        if (C4 == false)
+                        {
+                            CaballoParking[0].Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                            CaballoParking[0].Refresh();
+                            C4 = true;
+                        }
                         CaballoParking[0].Top = CaballoParking[0].Top + n1.Next(10, 30);
                     }
 
                     if (CaballoParking[0].Location.X >= 12 && CaballoParking[0].Location.Y >= 176)
                     {
-                        CaballoParking[0].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C5 == false)
+                        {
+                            CaballoParking[0].Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                            CaballoParking[0].Refresh();
+                            C5 = true;
+                        }
                         CaballoParking[0].Left = CaballoParking[0].Left - n1.Next(10, 30);
 
                     }
@@ -95,6 +114,11 @@ namespace PruebaParqueo
                 }
                 else
                 {
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                     timer1.Enabled = false;
                     timer2.Enabled = true;
                 }
@@ -103,6 +127,7 @@ namespace PruebaParqueo
             if (Parking[0] == true)
             {
                 CaballoParking[0] = Caballo;
+                CaballoParking[0].BringToFront();
 
                 if (Caballo.Location.X <= 1173)
                 {
@@ -113,14 +138,25 @@ namespace PruebaParqueo
                 {
                     //Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipXY);
                     //Caballo.Refresh();
-                    CaballoParking[0].Image = Image.FromFile(@"C:\CarroArriba.png");
+
+                    if (C1==false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Caballo.Refresh();
+                        C1 = true;
+                    }
                     Caballo.Top = Caballo.Top - n1.Next(5, 10);
 
                 }
 
                 if (Caballo.Location.X <= 1498 && Caballo.Location.Y <= 66)
                 {
-                    CaballoParking[0].Image = Image.FromFile(@"C:\Carro.png");
+                    if (C2 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Caballo.Refresh();
+                        C2 = true;
+                    }
                     Caballo.Left = Caballo.Left + n1.Next(5, 10);
                 }
 
@@ -128,6 +164,12 @@ namespace PruebaParqueo
                 {
                     Parking[0] = false;
                     timer1.Enabled = false;
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
+
                 }
                
                 
@@ -161,21 +203,37 @@ namespace PruebaParqueo
                 {
                     CargarLabel(1);
 
-                    if (CaballoParking[1].Location.X >= 916)
+                    if (CaballoParking[1].Location.X >= 1173)
                     {
-                        CaballoParking[1].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C3 == false)
+                        {
+                            CaballoParking[1].Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                            CaballoParking[1].Refresh();
+                            C3 = true;
+                        }
                         CaballoParking[1].Left = CaballoParking[1].Left - n2.Next(10, 30);
 
                     }
-                    if (CaballoParking[1].Location.X <= 916 && CaballoParking[1].Location.Y >= 176)
+                    if (CaballoParking[1].Location.X <= 1173 && CaballoParking[1].Location.Y >= 176)
                     {
-                        CaballoParking[1].Image = Image.FromFile(@"C:\CarroAbajo.png");
+                        if (C4 == false)
+                        {
+                            CaballoParking[1].Image.RotateFlip(RotateFlipType.Rotate270FlipXY);
+                            CaballoParking[1].Refresh();
+                            C4 = true;
+                        }
+               
                         CaballoParking[1].Top = CaballoParking[1].Top - n2.Next(10, 30);
                     }
 
                     if (CaballoParking[1].Location.X >= 12 && CaballoParking[1].Location.Y <= 176)
                     {
-                        CaballoParking[1].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C5 == false)
+                        {
+                            CaballoParking[1].Image.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                            CaballoParking[1].Refresh();
+                            C5 = true;
+                        }
                         CaballoParking[1].Left = CaballoParking[1].Left - n2.Next(10, 30);
 
                     }
@@ -197,12 +255,18 @@ namespace PruebaParqueo
                 {
                     timer2.Enabled = false;
                     timer3.Enabled = true;
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                 }
             }
 
             if (Parking[1] == true)
             {
                 CaballoParking[1] = Caballo;
+                CaballoParking[1].BringToFront();
 
                 if (Caballo.Location.X <= 1173)
                 {
@@ -211,13 +275,23 @@ namespace PruebaParqueo
 
                 if (Caballo.Location.X >= 1173 && Caballo.Location.Y >= 219)
                 {
-                    CaballoParking[1].Image = Image.FromFile(@"C:\CarroArriba.png");
+                    if (C1 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Caballo.Refresh();
+                        C1 = true;
+                    }
                     Caballo.Top = Caballo.Top - n2.Next(5, 10);
                 }
 
                 if (Caballo.Location.X <= 1498 && Caballo.Location.Y <= 219)
                 {
-                    CaballoParking[1].Image = Image.FromFile(@"C:\Carro.png");
+                    if (C2 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Caballo.Refresh();
+                        C2 = true;
+                    }
                     Caballo.Left = Caballo.Left + n2.Next(5, 10);
                 }
 
@@ -225,6 +299,11 @@ namespace PruebaParqueo
                 {
                     Parking[1] = false;
                     timer2.Enabled = false;
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                 }
 
                 if (timer2.Enabled == false && Parking[1] == false)
@@ -254,21 +333,36 @@ namespace PruebaParqueo
                 {
                     CargarLabel(2);
 
-                    if (CaballoParking[2].Location.X >= 916)
+                    if (CaballoParking[2].Location.X >= 1173)
                     {
-                        CaballoParking[2].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C3 == false)
+                        {
+                            CaballoParking[2].Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                            CaballoParking[2].Refresh();
+                            C3 = true;
+                        }
                         CaballoParking[2].Left = CaballoParking[2].Left - n3.Next(10, 30);
 
                     }
-                    if (CaballoParking[2].Location.X <= 916 && CaballoParking[2].Location.Y >= 176)
+                    if (CaballoParking[2].Location.X <= 1173 && CaballoParking[2].Location.Y >= 176)
                     {
-                        CaballoParking[2].Image = Image.FromFile(@"C:\CarroArriba.png");
+                        if (C4 == false)
+                        {
+                            CaballoParking[2].Image.RotateFlip(RotateFlipType.Rotate270FlipXY);
+                            CaballoParking[2].Refresh();
+                            C4 = true;
+                        }
                         CaballoParking[2].Top = CaballoParking[2].Top - n3.Next(10, 30);
                     }
 
                     if (CaballoParking[2].Location.X >= 12 && CaballoParking[2].Location.Y <= 176)
                     {
-                        CaballoParking[2].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C5 == false)
+                        {
+                            CaballoParking[2].Image.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                            CaballoParking[2].Refresh();
+                            C5 = true;
+                        }
                         CaballoParking[2].Left = CaballoParking[2].Left - n3.Next(10, 30);
                     }
 
@@ -287,6 +381,11 @@ namespace PruebaParqueo
                 }
                 else
                 {
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                     timer3.Enabled = false;
                     timer4.Enabled = true;
                 }
@@ -295,6 +394,7 @@ namespace PruebaParqueo
             if (Parking[2] == true)
             {
                 CaballoParking[2] = Caballo;
+                CaballoParking[2].BringToFront();
 
                 if (Caballo.Location.X <= 1173)
                 {
@@ -304,13 +404,23 @@ namespace PruebaParqueo
 
                 if (Caballo.Location.X >= 1173 && Caballo.Location.Y <= 372)
                 {
-                    CaballoParking[2].Image = Image.FromFile(@"C:\CarroAbajo.png");
+                    if (C1 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Caballo.Refresh();
+                        C1 = true;
+                    }
                     Caballo.Top = Caballo.Top + n3.Next(5, 10);
                 }
 
                 if (Caballo.Location.X <= 1498 && Caballo.Location.Y >= 372)
                 {
-                    CaballoParking[2].Image = Image.FromFile(@"C:\Carro.png");
+                    if (C2 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Caballo.Refresh();
+                        C2 = true;
+                    }
                     Caballo.Left = Caballo.Left + n3.Next(5, 10);
                 }
 
@@ -319,6 +429,11 @@ namespace PruebaParqueo
                 {
                     Parking[2] = false;
                     timer3.Enabled = false;
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                 }
 
                 if (timer3.Enabled == false && Parking[2] == false)
@@ -348,21 +463,37 @@ namespace PruebaParqueo
                 {
                     CargarLabel(3);
 
-                    if (CaballoParking[3].Location.X >= 916)
+                    if (CaballoParking[3].Location.X >= 1173)
                     {
-                        CaballoParking[3].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C3 == false)
+                        {
+                            CaballoParking[3].Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                            CaballoParking[3].Refresh();
+                            C3 = true;
+                        }
                         CaballoParking[3].Left = CaballoParking[3].Left - n4.Next(10, 30);
 
                     }
-                    if (CaballoParking[3].Location.X <= 916 && CaballoParking[3].Location.Y >= 176)
+                    if (CaballoParking[3].Location.X <= 1173 && CaballoParking[3].Location.Y >= 176)
                     {
-                        CaballoParking[3].Image = Image.FromFile(@"C:\CarroArriba.png");
+                        if (C4 == false)
+                        {
+                            CaballoParking[3].Image.RotateFlip(RotateFlipType.Rotate270FlipXY);
+                            CaballoParking[3].Refresh();
+                            C4 = true;
+                        }
+
                         CaballoParking[3].Top = CaballoParking[3].Top - n4.Next(10, 30);
                     }
 
                     if (CaballoParking[3].Location.X >= 12 && CaballoParking[3].Location.Y <= 176)
                     {
-                        CaballoParking[3].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C5 == false)
+                        {
+                            CaballoParking[3].Image.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                            CaballoParking[3].Refresh();
+                            C5 = true;
+                        }
                         CaballoParking[3].Left = CaballoParking[3].Left - n4.Next(10, 30);
 
                     }
@@ -381,6 +512,11 @@ namespace PruebaParqueo
                 }
                 else
                 {
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                     timer4.Enabled = false;
                     timer5.Enabled = true;
                 }
@@ -389,6 +525,7 @@ namespace PruebaParqueo
             if (Parking[3] == true)
             {
                 CaballoParking[3] = Caballo;
+                CaballoParking[3].BringToFront();
 
                 if (Caballo.Location.X <= 1173)
                 {
@@ -397,13 +534,23 @@ namespace PruebaParqueo
 
                 if (Caballo.Location.X >= 1173 && Caballo.Location.Y <= 524)
                 {
-                    CaballoParking[3].Image = Image.FromFile(@"C:\CarroAbajo.png");
+                    if (C1 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Caballo.Refresh();
+                        C1 = true;
+                    }
                     Caballo.Top = Caballo.Top + n4.Next(5, 10);
                 }
 
                 if (Caballo.Location.X <= 1498 && Caballo.Location.Y >= 524)
                 {
-                    CaballoParking[3].Image = Image.FromFile(@"C:\Carro.png");
+                    if (C2 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Caballo.Refresh();
+                        C2 = true;
+                    }
                     Caballo.Left = Caballo.Left + n4.Next(5, 10);
                 }
 
@@ -411,6 +558,11 @@ namespace PruebaParqueo
                 {
                     Parking[3] = false;
                     timer4.Enabled = false;
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                 }
 
                 if (timer4.Enabled == false && Parking[3] == false)
@@ -438,21 +590,37 @@ namespace PruebaParqueo
                 {
                     CargarLabel(4);
 
-                    if (CaballoParking[4].Location.X >= 916)
+                    if (CaballoParking[4].Location.X >= 1173)
                     {
-                        CaballoParking[4].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C3 == false)
+                        {
+                            CaballoParking[4].Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                            CaballoParking[4].Refresh();
+                            C3 = true;
+                        }
                         CaballoParking[4].Left = CaballoParking[4].Left - n5.Next(10, 30);
 
                     }
-                    if (CaballoParking[4].Location.X <= 916 && CaballoParking[4].Location.Y >= 176)
+                    if (CaballoParking[4].Location.X <= 1173 && CaballoParking[4].Location.Y >= 176)
                     {
-                        CaballoParking[4].Image = Image.FromFile(@"C:\CarroArriba.png");
+                        if (C4 == false)
+                        {
+                            CaballoParking[4].Image.RotateFlip(RotateFlipType.Rotate270FlipXY);
+                            CaballoParking[4].Refresh();
+                            C4 = true;
+                        }
+
                         CaballoParking[4].Top = CaballoParking[4].Top - n5.Next(10, 30);
                     }
 
                     if (CaballoParking[4].Location.X >= 12 && CaballoParking[4].Location.Y <= 176)
                     {
-                        CaballoParking[4].Image = Image.FromFile(@"C:\CarroAtras.png");
+                        if (C5 == false)
+                        {
+                            CaballoParking[4].Image.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                            CaballoParking[4].Refresh();
+                            C5 = true;
+                        }
                         CaballoParking[4].Left = CaballoParking[4].Left - n5.Next(10, 30);
 
                     }
@@ -471,6 +639,11 @@ namespace PruebaParqueo
                 }
                 else
                 {
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                     timer5.Enabled = false;
                     timer1.Enabled = true;
                 }
@@ -479,6 +652,7 @@ namespace PruebaParqueo
             if (Parking[4] == true)
             {
                 CaballoParking[4] = Caballo;
+                CaballoParking[4].BringToFront();
 
                 if (Caballo.Location.X <= 1173)
                 {
@@ -487,18 +661,34 @@ namespace PruebaParqueo
 
                 if (Caballo.Location.X >= 1173 && Caballo.Location.Y <= 672)
                 {
-                    CaballoParking[4].Image = Image.FromFile(@"C:\CarroAbajo.png");
+                    if (C1 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Caballo.Refresh();
+                        C1 = true;
+                    }
                     Caballo.Top = Caballo.Top + n5.Next(5, 10);
                 }
 
                 if (Caballo.Location.X <= 1498 && Caballo.Location.Y >= 672)
                 {
-                    CaballoParking[4].Image = Image.FromFile(@"C:\Carro.png");
+                    if (C2 == false)
+                    {
+                        Caballo.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Caballo.Refresh();
+                        C2 = true;
+                    }
+
                     Caballo.Left = Caballo.Left + n5.Next(5, 10);
                 }
 
                 if (Caballo.Location.X >= 1498 && Caballo.Location.Y >= 672)
                 {
+                    C1 = false;
+                    C2 = false;
+                    C3 = false;
+                    C4 = false;
+                    C5 = false;
                     Parking[4] = false;
                     timer5.Enabled = false;
                 }
@@ -528,7 +718,7 @@ namespace PruebaParqueo
             imgPictureBox.Location = new System.Drawing.Point(12, 361);
             imgPictureBox.Size = new System.Drawing.Size(145, 103);
             imgPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            imgPictureBox.Image = Image.FromFile(@"C:\Carro.png");  //ebede532f6f5cf644a3fcf79d14b046c.gif
+            imgPictureBox.Image = Image.FromFile(Ruta[Llegadas.Next(0,4)]);  //ebede532f6f5cf644a3fcf79d14b046c.gif
             Controls.Add(imgPictureBox);
             imgPictureBox.Visible = true;
 
@@ -622,6 +812,12 @@ namespace PruebaParqueo
             timer2.Enabled = false;
             timer3.Enabled = false;
             timer4.Enabled = false;
+            timer5.Enabled = false;
+            TiempoC1.Enabled = false;
+            TiempoC2.Enabled = false;
+            TiempoC3.Enabled = false;
+            TiempoC4.Enabled = false;
+            TiempoC5.Enabled = false;
 
         }
 
@@ -646,3 +842,4 @@ namespace PruebaParqueo
 
     }
 }
+

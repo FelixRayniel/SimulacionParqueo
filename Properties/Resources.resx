@@ -118,10 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icone-fleche-droite-jaune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-fleche-droite-jaune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vBcoKD-black-thick-line-png-thin-lines-thick-lines-horizontal-lines-" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vBcoKD-black-thick-line-png-thin-lines-thick-lines-horizontal-lines-.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ebede532f6f5cf644a3fcf79d14b046c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ebede532f6f5cf644a3fcf79d14b046c.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Linea2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Linea2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-fleche-gauche-jaune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-fleche-gauche-jaune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="58f8bd900ed2bdaf7c12830c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\58f8bd900ed2bdaf7c12830c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
